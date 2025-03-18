@@ -1,0 +1,644 @@
+:: StoryTitle
+FishFinder
+
+
+:: StoryData
+{
+  "ifid": "FFA2BE14-782E-45ED-9152-DF5A009306FD",
+  "format": "SugarCube",
+  "format-version": "2.37.3",
+  "start": "MainMenu",
+  "zoom": 1
+}
+
+
+:: ... {"position":"1100,1150","size":"100,100"}
+<img src="images/you_died_axe.png" width="256" height="256">
+
+Before you can react they swing.
+
+The axe connects with your upper right arm, cleaving into it.
+
+You yell in shock as they pull the axe from your wound and prepare to swing again
+
+[[Try to defend yourself]]
+
+<<audio "Attack" loop play>>
+<<audio "Main" stop>>
+
+
+:: A large kitchen knife {"position":"900,650","size":"100,100"}
+You hide the knife under a nearby pillow, now you have a weapon in your home just in case you need it.
+
+<img src="images/knife.png" width="128" height="128">
+
+[[Go back->Open your kitchen drawer]]
+
+<<set $knife to 1>>
+<<set $knifehid to 1>>
+
+
+:: A screwdriver {"position":"775,650","size":"100,100"}
+You pocket the screwdriver, should be small enough to keep with you and not raise suspiscion.
+
+<img src="images/screwdriver.png" width="128" height="128">
+
+[[Go back->Open your kitchen drawer]]
+
+<<set $screw to 1>>
+<<set $screwhas to 1>>
+
+
+:: Accept the invitation {"position":"1100,400","size":"100,100"}
+You arrive at the restaurant and you ask for a table reserved under their name.
+
+<img src="images/restaurant.png" width="500" height="500">
+
+The waiter checks the computer before nodding and leading you over to the table.
+
+You see them patiently sat with their hands placed under their legs.
+
+<img src="images/date.png" width="128" height="128">
+
+[[Sit down]]
+<<if $beatdown is 1>>
+You feel a sense of anger when you look at them.
+
+[[Fuck them up]]
+<</if>>
+
+
+:: Actually why don't you come back to mine? {"position":"900,900","size":"100,100"}
+You invite them to your place, as you walk back you idly chat but you both seem.. nervous.
+<<if $knife is 0>>
+[[You enter your flat->no knife]]
+<</if>>
+<<if $knife is 1>>
+[[You enter your flat->yes knife]]
+<</if>>
+
+
+:: And so you die again, hopefully for the last time {"position":"1500,1500","size":"100,100"}
+You awake with a loud gasp, clutching your chest and patting your body.
+
+You let an angry scream, as you check the date.
+
+It's the 6th of august.
+
+The day has looped yet again.
+
+[[...->credits]]
+
+
+:: Decline {"position":"1400,200","size":"100,100"}
+After what happened or what is about to happen? you don't know.
+
+You decide to leave the message unanswered and stay home today.
+
+[[Go and make some food]]
+
+
+:: Dig in {"position":"1100,775","size":"100,100"}
+Your food finally arrives and you both dig in, forgetting about eachother for a moment as you enjoy the food in front of you.
+
+You both finish your meals, satisfied you begin discussing what you're gonna do after.
+
+"Wanna head back to mine? Play games and jam to that new album you were talking about?" They ask with an innocent smile.
+
+[[Head back to theirs]]
+<<if $loopthree is 1>>
+[[Actually why don't you come back to mine?]]
+<</if>>
+
+
+:: Finish it {"position":"1225,1025","size":"100,100"}
+You stumble over, glass in hand before releasing the fork from your grip and instead grabbing them by their hair.
+
+You lift their head up with the last of your strength and are ready to deal the final blow...
+
+Before you hear a car horn and tire screech.
+
+You and him are hit by a car, your body lays on the floor broken and bloody as does his.
+
+The world begins to fade away.
+
+<img src="images/you_died.png" width="128" height="128">
+
+[[You lay in a puddle of your own blood as you slowly die->Loop]]
+
+<<set $loopthree to 1>>
+<<set $beatdown to 2>>
+<<set $isdead to 1>>
+
+
+:: Fuck them up {"position":"1225,525","size":"100,100"}
+You leap towards them, knocking them off the chair and onto the ground.
+
+They look up at you with fear in their eyes for a moment as the whole restaurant goes silent.
+
+They quickly stand up, grab a fork from the table and rush you.
+
+[[Swing at them]]
+
+<<audio "Attack" loop play>>
+<<audio "Main" stop>>
+
+
+:: Give chase {"position":"1225,900","size":"100,100"}
+Still holding the fork in place to prevent it from bleeding you dry, you stumble through the now hollow window frame.
+
+You pick up a shard of glass off the ground, it cuts deep into your hand but it should be sharp enough to finish this.
+
+[[Finish it]]
+
+
+:: Go and make some food {"position":"1400,325","size":"100,100"}
+You decide to fry up a nice breakfast, accidentally spilling some oil on the floor in the process.
+
+You lean over to turn the tap off and slip.
+
+Your head strikes the counter and your vision flashes white as you tumble to the ground.
+
+Your vision blurs and the last thing you see as everything fades is a pool of your own blood which you are currently laying in.
+
+<img src="images/you_died.png" width="256" height="256">
+
+[[Your eyes close and you fade away->Loop]]
+
+<<set $looptwo to 1>>
+<<set $beatdown to 1>>
+<<set $isdead to 1>>
+
+<<audio "Attack" loop play>>
+<<audio "Main" stop>>
+
+
+:: Grab key {"position":"500,600","size":"100,100"}
+<<set $keys to 1>>
+
+Keys: $keys
+
+[[Go back->Tutorial scene]]
+
+
+:: Head back to theirs {"position":"1100,900","size":"100,100"}
+<img src="images/his_flat.png" width="500" height="500">
+
+You walk inside before taking your shoes off, you slump onto their sofa as your date puts some music on.
+
+"I'm just gonna go get changed real quick" they say before slinking away.
+
+[[You sit and wait, jamming to the music]]
+
+
+:: IDKFA Give all items {"position":"300,0","size":"100,100"}
+[[Back->debug]]
+
+
+:: Look around your room {"position":"900,400","size":"100,100"}
+You look around your flat, maybe you can bring something with you to defend yourself?
+
+Maybe you can hide a weapon here so you can take revenge.
+
+<img src="images/your_flat.png" width="500" height="500">
+
+<<if $loopfour is 1>>
+<<if $screwhas is 0>>
+! There must be something else in the drawer you can use
+<</if>>
+<</if>>
+
+[[Open your kitchen drawer]]
+
+[[Go back->Start game]]
+
+
+:: Loop {"position":"900,0","size":"100,100"}
+You awake with a loud gasp, clutching your chest and patting your body.
+
+You're still in one piece.
+
+[[Try to relax->Start game]]
+
+<<set $isdead to 0>>
+
+
+:: MainMenu {"position":"500,200","size":"100,100"}
+<img src="images/Title.png" width="500" height="500">
+
+[[Start game]]
+
+
+
+
+
+
+
+
+
+
+
+[[debug]]
+
+[[Tutorial scene]]
+
+<<set $loopone to 0>>
+<<set $looptwo to 0>>
+<<set $loopthree to 0>>
+<<set $loopfour to 0>>
+
+<<set $keys to 0>>
+<<set $knife to 0>>
+<<set $screw to 0>>
+<<set $beatdown to 0>>
+<<set $knifehid to 0>>
+<<set $isdead to 0>>
+<<set $screwhas to 0>>
+
+<<cacheaudio "Main" "audio/MainTrack.wav">>
+<<cacheaudio "Attack" "audio/Attack.wav">>
+<<cacheaudio "Credits" "audio/Credits.wav">>
+
+
+:: Open your kitchen drawer {"position":"900,525","size":"100,100"}
+You see utensils, knives and forks.
+
+<img src="images/drawer.png" width="256" height="256">
+
+But a few things catch your eye.
+<<if $knifehid is 0>>
+[[A large kitchen knife]]
+<</if>>
+<<if $loopfour is 1>>
+<<if $screw is 0>>
+[[A screwdriver]]
+<</if>>
+<</if>>
+[[Go back->Look around your room]]
+
+
+:: Pull out your screwdriver but attempt reason {"position":"1500,1200","size":"100,100"}
+"WAIT!!" You scream.
+
+They hesitate for a moment before lowering the axe.
+
+"Why are you doing this? atleast give me that before you kill me again" you ask as you shakily hold the screwdriver.
+
+"Again?" They ask with a shocked expression "So you aswell?"
+
+"What do you mean 'me aswell'?" You respond, fear in your voice.
+
+"You're looping too.. My day keeps restarting from when I first messaged you.." They look down for a moment.
+
+"I've looped through so many times, you've killed me and I've killed you both hoping that the end of the other will lead to freedom.. it's never worked."
+
+"Why not just let me leave?" You ask, desperation in your voice.
+
+"How do I know you won't hurt me?" They ask, raising the axe again.
+
+"Because we already know what will happen if I do." You say bluntly.
+
+They lower their axe and gesture to the door cautiously.
+
+[[You leave]]
+
+
+:: Sit down {"position":"1100,525","size":"100,100"}
+You sit down and they nervously avoid eye contact.
+
+Soon after however you both begin to talk, the nervousness fading revealing a bubbly personality underneath.
+
+You two rant to eachother about special interests such as music or video games.
+
+Agree or disagree you're having a great time.
+<<if $loopone is 1>>
+Even if you've been through this before you still enjoy the conversation.
+<</if>>
+The waiter eventually comes over and asks if you're ready to order.
+
+You both make your order, they order spaghetti and you order...
+
+[[Spaghetti->eating]]
+[[Steak->eating]]
+[[Chicken tenders->eating]]
+
+
+:: Start game {"position":"900,200","size":"100,100"}
+You're laying down on your bed, the curtains are closed and the lights are off.
+
+You're scrolling on your phone, you're lonely.
+
+It's currently the 6th of august.
+
+<img src="images/phone_UI_as_no_back.png" width="500" height="500">
+
+All of a sudden your phone lets out a buzz, you have a notification.
+
+<img src="images/notif.png" width="500" height="500">
+
+[[Tap the notification]]
+
+<<if $loopfour is 1>>
+<<if $screwhas is 0>>
+! Maybe there is a weapon you could bring along??
+<</if>>
+<</if>>
+<<if $loopthree is 1>>
+[[Look around your room]]
+<</if>>
+
+<<audio "Main" loop play>>
+<<audio "Attack" stop>>
+<<audio "Credits" stop>>
+
+
+:: StoryBanner {"position":"0,0","size":"100,100"}
+<<if $isdead is 0>>
+<img src="images/player.png" width="128" height="128">
+<</if>>
+<<if $isdead is 1>>
+<img src="images/player_death.png" width="128" height="128">
+<</if>>
+
+
+:: Swing at them {"position":"1225,650","size":"100,100"}
+You swing and they duck, barely dodging your fist before plunging the fork in the side of your neck.
+
+You hold their hand and therefore the fork in place preventing them from stabbing you again.
+
+[[Take this outside]]
+
+
+:: Take this outside {"position":"1225,775","size":"100,100"}
+You grab the collar of their shirt with your other hand before using all of your strength to fling them through one of the large restaurant windows.
+
+They crash through the glass, many tiny cuts peppering their skin as they groan in pain.
+
+<img src="images/bloody_datewith_scars.png" width="256" height="256">
+
+They try their best to crawl away.
+
+[[Give chase]]
+
+
+:: Tap the notification {"position":"1100,200","size":"100,100"}
+You tap the notification and are taken to the "Fish finder" app, you have one unread message.
+
+You can see the preview of the message which reads "Heyyyy <3".
+
+You answer with a similar ton and the conversation flows from there.
+
+You talk about favourite animals, places you wish to visit, hobbies etc.
+
+You seem to connect well.
+
+They ask if you've ever been to a restaurant nearby, you say "No I haven't"
+
+"Well why don't we go? I'll pay :> <3" They respond.
+
+[[Accept the invitation]]
+<<if $loopone is 1>>
+<<if $beatdown is 0>>
+You remember what just happened... A sense of deja vu washes over you.
+
+[[Decline]]
+<</if>>
+<</if>>
+
+
+:: Try to defend yourself {"position":"1100,1275","size":"100,100"}
+You raise your arm up in an attempt to stop the axe from hitting your head or neck.
+
+They swing again, the axe cleaving through your right forearm.
+
+Your hand dangles from your new stump, hopelessly hanging on by a few shreds of muscle and sinue,  blood begins to gush from the wound.
+
+[[Try to run]]
+
+
+:: Try to go through door {"position":"600,600","size":"100,100"}
+The door is locked
+
+[[Go back->Tutorial scene]]
+
+
+:: Try to run {"position":"1100,1400","size":"100,100"}
+You attempt to stand up and bolt for the door before another axe swing comes your way.
+
+Your date swings and the blade of the axe buries itself deep within the right side of your stomach, you crumble to the floor.
+
+Clutching your stomach and assuming the fetal, you feel the axe get ripped from the new wound.
+
+Your date stands above you as you slowly bleed out, your life leaking out through the new openings your date has given you.
+
+<img src="images/you_died_boot.png" width="256" height="256">
+
+You look up as your date swings the axe down towards your head.
+
+you feel your skull break as the axe makes contact.
+
+[[And everything goes dark->Loop]]
+
+<<set $loopone to 1>>
+<<set $isdead to 1>>
+
+
+:: Tutorial scene {"position":"500,400","size":"100,100"}
+This is a short demo of how the mechanics of this game work.
+
+There is a door in front of you and a cabinet to your left.
+
+Keys: $keys
+<<if $keys is 1>> 
+[[Unlock door]] <</if>> <<if $keys is 0>>
+[[Grab key]]
+
+[[Try to go through door]]
+<</if>>
+
+
+:: Unlock door {"position":"400,600","size":"100,100"}
+You will need to find items throughout the game, the game also requires multiple playthroughs to complete.
+
+Good luck!
+
+[[Main Menu->MainMenu]]
+
+
+:: Use screwdriver {"position":"1300,1200","size":"100,100"}
+You lunge forward and bury the screw driver into the side of their neck, blood sprays from the point of impact.
+
+In a panic they swing the axe, it clips your neck and knocks you to the ground.
+
+You lay there with your life fading away, maybe you could have talked it out? maybe you could try again...
+
+<img src="images/bloody_date.png" width="256" height="256">
+
+[[Your life fades away once again->Loop]]
+
+<<set $screw to 2>>
+
+<<audio "Attack" loop play>>
+<<audio "Main" stop>>
+
+
+:: VAR STORAGE {"position":"125,675","size":"100,100"}
+<<if $isdead is 0>>
+<img src="images/player.png" width="256" height="256">
+<</if>>
+
+<<if $isdead is 1>>
+<img src="images/player_death.png" width="256" height="256">
+<</if>>
+
+\:: StoryBanner
+<<if $isdead is 0>>
+<img src="images/player.png" width="128" height="128">
+<</if>>
+<<if $isdead is 1>>
+<img src="images/player_death.png" width="128" height="128">
+<</if>>
+
+
+:: You leave {"position":"1500,1325","size":"100,100"}
+You walk outside and take a deep breath as you walk alongside the road back home.
+
+As you do, you hear tires screech as your head whips around to look behind you.
+
+A car strikes you at full speed as you fly over the hood, your broken body slams into the ground as the car crashes.
+
+People rush over and surround you as others try to drag the knocked out driver out of the crashed car.
+
+Your life fades as you hear people call 999.
+
+<img src="images/you_died.png" width="256" height="256">
+
+[[And so you die again, hopefully for the last time]]
+
+<<audio "Attack" loop play>>
+<<audio "Main" stop>>
+<<set $isdead to 1>>
+
+
+:: You sit and wait, jamming to the music {"position":"1100,1025","size":"100,100"}
+You hear footsteps behind you, getting close to you at a quickened pace.
+
+You hear the crinkling of plastic as you turn your head to look behind you.
+
+[[...]]
+<<if $screw is 1>>
+[[Use screwdriver]]
+<</if>>
+<<if $screw is 2>>
+[[Pull out your screwdriver but attempt reason]]
+<</if>>
+
+
+:: credits {"position":"1500,1625","size":"100,100"}
+THANK YOU FOR PLAYING!!!
+
+Writing and Twine game by William White
+
+Art and visuals by Viktoriya Surmyak
+
+[[Main Menu->MainMenu]]
+
+<<audio "Attack" stop>>
+<<audio "Credits" loop play>>
+
+
+:: debug {"position":"300,200","size":"100,100"}
+[[set loop to one]]
+
+[[set loop to two]]
+
+[[set loop to three]]
+
+[[set loop to foure]]
+
+[[IDKFA Give all items]]
+
+
+:: eating {"position":"1100,650","size":"100,100"}
+Your date compliments your food choice as the waiter leaves.
+
+You continue your conversation, occasionally complaining about how long the food is taking.
+
+Finally your food arrives and you both finish your conversations.
+<<if $loopone is 1>>
+You get a sense of deja vu.
+<</if>>
+[[Dig in]]
+
+
+:: no knife {"position":"900,1025","size":"100,100"}
+You both walk inside before your date immediately swings open the kitchen drawer, grabs a large from it and plunges it deep into your neck.
+
+You fall to the ground, clutching your throat as blood sprays from it.
+
+Your life fades once again as your vision blurs.
+
+<img src="images/you_died.png" width="256" height="256">
+
+[[You see them staring down at you as you die->Loop]]
+
+<<set $isdead to 1>>
+
+<<audio "Attack" loop play>>
+<<audio "Main" stop>>
+
+
+:: set loop to foure {"position":"100,475","size":"100,100"}
+<<set $loopone to 1>>
+<<set $looptwo to 1>>
+<<set $loopthree to 1>>
+<<set $loopfour to 1>>
+
+[[Start game]]
+
+
+:: set loop to one {"position":"100,100","size":"100,100"}
+<<set $loopone to 1>>
+
+[[Start game]]
+
+
+:: set loop to three {"position":"100,350","size":"100,100"}
+<<set $loopone to 1>>
+<<set $looptwo to 1>>
+<<set $loopthree to 1>>
+
+[[Start game]]
+
+
+:: set loop to two {"position":"100,225","size":"100,100"}
+<<set $loopone to 1>>
+<<set $looptwo to 1>>
+
+[[Start game]]
+
+
+:: yes knife {"position":"775,1025","size":"100,100"}
+You both walk inside before your date immediately swings open the kitchen drawer and attempts to grab the knife from it, except its not there.
+
+They look down at the drawer in shock, they expected to find the knife you hid.
+
+You grab the knife from under the nearby pillow and charge them.
+
+In a panic they grab you and you two wrestle for a moment.
+
+You both stumble towards the window which you both eventually crash through.
+
+Many shards of glass cut your skin as you fall to the concrete below, both your bodies crumbling from the multi story fall.
+
+You lay there with your life fading away.
+
+<img src="images/you_died_arm.png" width="256" height="256">
+
+[[You fade away once again and die->Loop]]
+
+<<set $loopfour to 1>>
+<<set $isdead to 1>>
+
+<<audio "Attack" loop play>>
+<<audio "Main" stop>>
